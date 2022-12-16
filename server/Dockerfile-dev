@@ -1,0 +1,22 @@
+#Apollo V4 Server
+FROM node:18-bullseye-slim as base
+
+MAINTAINER Nikolaos CHASANIS <info@nikolaoschasanis.com>
+
+WORKDIR /usr/src/app/server
+
+
+COPY ./package.*json ./
+
+CMD  ["npm","install"]
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+
+#Stage 2
+FROM base as dev
+
+COPY . .
+
+CMD ["npm","run","dev"]

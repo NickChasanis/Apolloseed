@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+   apolloseed:
+    build:
+        context: ./server
+        dockerfile: Dockerfile-dev
+    container_name: Apollov4server
+    volumes:
+      - ./:/usr/src/app/server
+      - /usr/app/server/node_modules
+    ports:
+      - "3000:3000"

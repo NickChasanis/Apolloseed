@@ -1,0 +1,29 @@
+{
+  "name": "apolloseed",
+  "version": "1.0.0",
+  "description": "Apollo server 4 seed",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "postinstall": "npm run compile",
+    "compile": "tsc",
+    "watch": "nodemon --watch './**/*.{ts,graphql,json}' --exec node --loader ts-node/esm --experimental-specifier-resolution=node ./dist/server.js",
+    "dev": "tsc-watch --onSuccess \"npm run watch\"",
+    "start": "npm run compile && node --es-module-specifier-resolution=node ./dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.0",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
+    "@types/node": "^18.6.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "tsc-watch": "^5.0.3",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}
