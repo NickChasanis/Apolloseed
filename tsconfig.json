@@ -18,20 +18,6 @@
     "experimentalDecorators": true,
     "types": [
       "node"
-    ],
-    "paths": {
-      "@/*": [
-        "*"
-      ],
-      "@/tests/*": [
-        "../tests/*"
-      ]
-    },
-    "include": [
-      "server",
-      "./*.ts",
-      "tests"
-    ],
-    "exclude": []
+    ]
   }
 }
