@@ -1,12 +1,37 @@
 {
   "compilerOptions": {
-    "rootDirs": ["server"],
-    "outDir": "dist",
-    "lib": ["es2020"],
-    "target": "es2020",
+    "rootDirs": [
+      "server"
+    ],
+    "outDir": "./dist",
+    "lib": [
+      "es2020"
+    ],
+    "target": "es2021",
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "types": ["node"]
+    "strict": true,
+    "noImplicitOverride": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@/*": [
+        "*"
+      ],
+      "@/tests/*": [
+        "../tests/*"
+      ]
+    },
+    "include": [
+      "server",
+      "./*.ts",
+      "tests"
+    ],
+    "exclude": []
   }
 }
