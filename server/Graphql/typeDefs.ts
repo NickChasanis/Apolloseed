@@ -1,7 +1,4 @@
-import gql from 'graphql-tag';
-
-// noinspection GraphQLTypeRedefinition
-const typeDefs = gql `
+const typeDefs = `
 type Book {
     title: String
     author: String

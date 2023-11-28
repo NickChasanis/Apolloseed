@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
     "rootDirs": [
-      "server"
+      "./server/*"
     ],
     "outDir": "./dist",
     "lib": [
-      "es2020"
+      "esNext"
     ],
-    "target": "es2021",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "esNext",
+    "module": "esNext",
+    "moduleResolution": "node16",
     "esModuleInterop": true,
     "strict": true,
     "noImplicitOverride": true,
